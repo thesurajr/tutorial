@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSP Tutorial</title>
+</head>
+<body>
+<a href="/index.html">Go To Homepage</a>
+    <h1>JSP Tutorial</h1>
+    <p>JSP technology is used to create web applications, similar to Servlet technology. It can be thought of as an extension to Servlet because it provides more functionality than Servlet, such as expression language, JSTL, etc.</p>
+
+    <p>A JSP page consists of HTML tags and JSP tags. JSP pages are easier to maintain than Servlets because we can separate designing and development. It provides some additional features such as Expression Language, Custom Tags, etc.</p>
+
+    <h2>Advantages of JSP over Servlet</h2>
+    <ol>
+        <li><strong>Extension to Servlet:</strong> JSP technology is an extension to Servlet technology. We can use all the features of Servlets in JSP, and in addition, we can use implicit objects, predefined tags, expression language, and custom tags in JSP, making JSP development easier.</li>
+        <li><strong>Easy to maintain:</strong> JSP can be easily managed because we can separate our business logic from presentation logic. In Servlet technology, we often mix our business logic with presentation logic.</li>
+        <li><strong>Fast Development: No need to recompile and redeploy:</strong> If a JSP page is modified, there is no need to recompile and redeploy the project. In contrast, with Servlets, the code needs to be updated and recompiled if we want to change the look and feel of the application.</li>
+        <li><strong>Less code than Servlet:</strong> JSP allows us to use many tags such as action tags, JSTL, custom tags, etc., which reduces the amount of code. Moreover, we can use EL (Expression Language), implicit objects, etc.</li>
+    </ol>
+
+    <h2>The Lifecycle of a JSP Page</h2>
+    <p>JSP pages follow these phases:</p>
+    <ol>
+        <li><strong>Translation of JSP Page:</strong> The JSP page is translated into Servlet by the JSP translator, a part of the web server responsible for this translation.</li>
+        <li><strong>Compilation of JSP Page:</strong> The Servlet page is compiled by the compiler and gets converted into a class file.</li>
+        <li><strong>Classloading:</strong> The classloader loads the class file.</li>
+        <li><strong>Instantiation:</strong> An object of the generated Servlet is created.</li>
+        <li><strong>Initialization:</strong> The container invokes the `jspInit()` method.</li>
+        <li><strong>Request processing:</strong> The container invokes the `_jspService()` method for handling requests.</li>
+        <li><strong>Destroy:</strong> The container invokes the `jspDestroy()` method when the JSP page is no longer needed.</li>
+    </ol>
+
+    <p>Note: `jspInit()`, `_jspService()`, and `jspDestroy()` are the life cycle methods of JSP.</p>
+
+    <h2>How JSP is converted into Servlet</h2>
+    <p>As depicted in the above diagram, a JSP page is translated into a Servlet by the JSP translator, which is a part of the web server responsible for translating the JSP page into Servlet. After that, the Servlet page is compiled by the compiler and gets converted into a class file. All the processes that happen in Servlet are performed on JSP later, like initialization, committing the response to the browser, and destroy.</p>
+</body>
+</html>
